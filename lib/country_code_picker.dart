@@ -126,7 +126,7 @@ class _CountryCodePickerState extends State<CountryCodePicker> {
            Flexible(
               fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
               child: Text(
-                selectedItem.dialCode,
+                '+1',
                 style: widget.textStyle ?? Theme.of(context).textTheme.button,
               ),
             )
