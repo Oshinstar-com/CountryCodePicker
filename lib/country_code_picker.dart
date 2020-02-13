@@ -36,11 +36,16 @@ class CountryCodePicker extends StatefulWidget {
 
   /// contains the country codes to load only the specified countries.
   final List<String> countryFilter;
+  
+  
+  /// determines if is a phone iso code picker
+  final bool isIsoCodePicker;
 
   CountryCodePicker({
     this.onChanged,
     this.onInit,
     this.initialSelection,
+    this.isIsoCodePicker,
     this.favorite = const [],
     this.countryFilter = const [],
     this.textStyle,
@@ -117,7 +122,16 @@ class _CountryCodePickerState extends State<CountryCodePicker> {
                     ),
                   )
                 : Container(),
-            Flexible(
+           widget.isIsoCode? 
+           Flexible(
+              fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
+              child: Text(
+                selectedItem.dial_code
+                style: widget.textStyle ?? Theme.of(context).textTheme.button,
+              ),
+            ),
+           : 
+           Flexible(
               fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
               child: Text(
                 widget.showOnlyCountryWhenClosed
