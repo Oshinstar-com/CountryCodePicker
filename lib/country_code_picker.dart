@@ -122,7 +122,7 @@ class _CountryCodePickerState extends State<CountryCodePicker> {
                     ),
                   )
                 : Container(),
-           widget.isIsoCode? 
+           widget.isIsoCodePicker? 
            Flexible(
               fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
               child: Text(
