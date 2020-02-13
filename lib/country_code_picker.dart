@@ -45,7 +45,7 @@ class CountryCodePicker extends StatefulWidget {
     this.onChanged,
     this.onInit,
     this.initialSelection,
-    this.isIsoCodePicker,
+    this.isIsoCodePicker = false,
     this.favorite = const [],
     this.countryFilter = const [],
     this.textStyle,
@@ -126,7 +126,7 @@ class _CountryCodePickerState extends State<CountryCodePicker> {
            Flexible(
               fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
               child: Text(
-                '+1',
+                selectedItem.dialCode,
                 style: widget.textStyle ?? Theme.of(context).textTheme.button,
               ),
             )
