@@ -126,10 +126,10 @@ class _CountryCodePickerState extends State<CountryCodePicker> {
            Flexible(
               fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
               child: Text(
-                selectedItem.dialCode
+                selectedItem.dialCode,
                 style: widget.textStyle ?? Theme.of(context).textTheme.button,
               ),
-            ),
+            )
            : 
            Flexible(
               fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
